@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabriquer ses outils numériques avec l'IA</title>
+  <meta name="description" content="Stand IAgora : découvrir le vibecoding en démos. Sites web, outils de travail, jeux, présentations, cartes, 3D… fabriqués en discutant avec l'IA.">
+  <link rel="icon" href="assets/logo-iagora.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Heebo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a href="https://iagora.fr/" aria-label="IAgora"><img class="logo" src="assets/logo-iagora.png" alt="IAgora"></a>
+      <span class="tag">Stand · Vibecoding · Démos</span>
+      <nav class="nav">
+        <a class="nav-link" href="#demos">Les démos</a>
+        <a class="nav-link nav-pill" href="#comprendre">Comprendre ➭</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Stand IAgora</p>
+          <h1>Fabriquer ses outils numériques <span class="nowrap">avec l'IA</span></h1>
+          <p class="lead">Le <strong>vibecoding</strong>, c'est créer un site, une appli, un jeu ou une carte <strong>en décrivant ce qu'on veut à une IA, en français</strong>, sans écrire soi-même une ligne de code. On teste, on corrige, on recommence… jusqu'à obtenir l'outil sur mesure dont on a besoin. Tous les exemples ci-dessous ont été fabriqués comme ça.</p>
+        </div>
+        <button class="hero-demo" type="button" data-demo="carte24h" aria-label="Ouvrir la démo : la carte interactive des 24 Heures du Mans">
+          <span class="bulle"><small>Exemple de demande</small>«&nbsp;Fais-moi une carte interactive des grands moments des 24&nbsp;Heures du&nbsp;Mans.&nbsp;»</span>
+          <img src="assets/demos/carte24h.webp" width="800" height="500" alt="">
+          <span class="hero-legende"><span>Carte 24 Heures</span><span>Voir la démo ➭</span></span>
+        </button>
+      </div>
+
+      <h2 class="choose" id="demos">Choisis un usage ➭</h2>
+      <div class="usages" id="usages"></div>
+
+      <section class="comprendre" id="comprendre" aria-labelledby="comprendre-titre">
+        <div class="comprendre-head">
+          <div>
+            <p class="eyebrow">En quelques slides</p>
+            <h2 class="section-title" id="comprendre-titre">Comprendre le vibecoding</h2>
+          </div>
+          <button class="cta cta-outline" type="button" id="deck-fs">⛶ Plein écran</button>
+        </div>
+
+        <div class="deck" id="deck" tabindex="0" aria-roledescription="diaporama" aria-label="Diaporama : comprendre le vibecoding">
+          <div class="deck-stage">
+
+            <!-- Slide 1 · Avant / Aujourd'hui -->
+            <article class="slide" data-title="Avant / aujourd'hui">
+              <div class="s-chrome"><span><i class="dot"></i>Comprendre</span><span>Avant / Aujourd'hui</span></div>
+              <p class="s-eyebrow">Le grand changement</p>
+              <h3 class="s-title">Trois profils, deux mondes.</h3>
+              <div class="s-world">
+                <div class="s-side">
+                  <h4>Avant l'IA générative</h4>
+                  <div class="s-row"><b>Développeurs</b><span>Je code en dur ou j'assemble des briques. Je peux créer ce que je veux.</span></div>
+                  <div class="s-row"><b>Débrouillards</b><span>Je m'aide d'interfaces (WordPress, no-code). Limité par le degré de personnalisation.</span></div>
+                  <div class="s-row"><b>Tout le monde</b><span>Je délègue, ou je paye un outil clé en main. Encore plus limité.</span></div>
+                </div>
+                <div class="s-side after">
+                  <h4>Aujourd'hui</h4>
+                  <div class="s-row"><b>Développeurs</b><span>Délèguent une partie du code à la machine, passent plus de temps à concevoir.</span></div>
+                  <div class="s-row"><b>Tout le monde</b><span>Peut demander à l'IA d'assembler les briques en discutant&nbsp;: du sur-mesure, sans coder.</span></div>
+                  <div class="s-row"><b>La bascule</b><span>Le sur-mesure devient accessible à qui sait <strong>formuler un besoin</strong>.</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Slide 2 · Trois zones -->
+            <article class="slide" data-title="Les trois zones">
+              <div class="s-chrome"><span><i class="dot"></i>Comprendre</span><span>Cartographie</span></div>
+              <p class="s-eyebrow">Savoir où l'on met les pieds</p>
+              <h3 class="s-title">Les trois zones du vibe coding.</h3>
+              <div class="s-g3">
+                <div class="s-card zone z1"><div class="s-n">01</div><h4>La zone confortable</h4><p>Pages statiques, jeux, prototypes, outils perso, sites vitrines simples. L'IA est à l'aise, vous itérez vite.</p></div>
+                <div class="s-card zone z2"><div class="s-n">02</div><h4>La zone exigeante</h4><p>Applis avec données, comptes utilisateurs, intégrations. Possible, mais il faut comprendre quelques concepts.</p></div>
+                <div class="s-card zone z3"><div class="s-n">03</div><h4>La zone à éviter</h4><p>Logiciels critiques, paiements, données sensibles, fortes contraintes de sécurité. Mieux vaut s'entourer.</p></div>
+              </div>
+              <p class="s-src">D'après Alexis Kovalenko, <b>«&nbsp;Que faut-il vibe coder&nbsp;?&nbsp;»</b></p>
+            </article>
+
+            <!-- Slide 3 · Limites -->
+            <article class="slide" data-title="Six limites">
+              <div class="s-chrome"><span><i class="dot alert"></i>Comprendre</span><span>Limites</span></div>
+              <p class="s-eyebrow">Ne pas s'enflammer</p>
+              <h3 class="s-title">Six limites à garder en tête.</h3>
+              <div class="s-g3 compact">
+                <div class="s-card"><p class="s-k">01 · Qualité</p><h4>Le code n'est pas toujours bon.</h4><p>Il fonctionne souvent, mais peut être lourd, redondant, fragile sur les cas tordus.</p></div>
+                <div class="s-card"><p class="s-k">02 · Sécurité</p><h4>Des failles invisibles.</h4><p>Clés exposées, requêtes non protégées, données mal isolées. À auditer dès que c'est public.</p></div>
+                <div class="s-card"><p class="s-k">03 · Maintenance</p><h4>Qui reprend le projet dans 6&nbsp;mois&nbsp;?</h4><p>Sans documentation ni relecture humaine, un projet vibe-codé devient vite illisible.</p></div>
+                <div class="s-card"><p class="s-k">04 · Fiabilité</p><h4>Monter en puissance.</h4><p>Ça marche pour 10 utilisateurs, pas forcément pour 10&nbsp;000. Charge, cas limites, performances.</p></div>
+                <div class="s-card"><p class="s-k">05 · Intérêt</p><h4>Parfois, l'automatisation suffit.</h4><p>Un tableur bien branché peut résoudre le besoin sans construire une appli entière.</p></div>
+                <div class="s-card"><p class="s-k">06 · Coût</p><h4>Les mauvaises surprises.</h4><p>Abonnements IA, hébergement, base de données&nbsp;: à anticiper avant de se lancer.</p></div>
+              </div>
+            </article>
+
+            <!-- Slide 4 · Outils faciles -->
+            <article class="slide" data-title="Outils · faciles d'accès">
+              <div class="s-chrome"><span><i class="dot"></i>Outils · 1 / 3</span><span>Faciles d'accès</span></div>
+              <span class="s-tag">Famille 01</span>
+              <h3 class="s-title">Faciles d'accès, déjà dans vos pratiques.</h3>
+              <div class="s-g2">
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon">G</span><span class="s-pill">Démarrage</span></div><h4>Canvas sur Gemini</h4><p class="s-url">gemini.google.com</p><p>Un espace dans Gemini pour générer une page interactive ou un mini-outil, sans rien installer. Idéal pour un premier prototype.</p><p class="s-price">Gratuit · offre payante à partir d'une vingtaine d'euros / mois</p></div>
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon">C</span><span class="s-pill">Démarrage</span></div><h4>Claude en direct</h4><p class="s-url">claude.ai</p><p>On décrit, Claude génère une page interactive visible immédiatement dans la conversation. Très bon pour itérer vite.</p><p class="s-price">Gratuit · offre payante à partir d'une vingtaine d'euros / mois</p></div>
+              </div>
+            </article>
+
+            <!-- Slide 5 · Démocratisation -->
+            <article class="slide" data-title="Outils · démocratisation">
+              <div class="s-chrome"><span><i class="dot"></i>Outils · 2 / 3</span><span>Démocratisation</span></div>
+              <span class="s-tag pink">Famille 02</span>
+              <h3 class="s-title">Les outils qui démocratisent le sujet.</h3>
+              <div class="s-g2">
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon pink">L</span><span class="s-pill">Asso / projet</span></div><h4>Lovable</h4><p class="s-url">lovable.dev</p><p>Vous décrivez une appli en français, Lovable génère l'interface, la base de données et le déploiement. Bon pour passer du proto à un vrai outil.</p><p class="s-price">Essai gratuit · abonnement mensuel (à partir de 21/25&nbsp;€ / mois)</p></div>
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon pink">B</span><span class="s-pill">Asso / projet</span></div><h4>Bolt</h4><p class="s-url">bolt.new</p><p>Même esprit, directement dans le navigateur. Génère une appli web complète depuis une description, déployable en un clic.</p><p class="s-price">Crédits gratuits · abonnement mensuel (à partir de 18/25&nbsp;$ / mois)</p></div>
+              </div>
+            </article>
+
+            <!-- Slide 6 · Plus complexes -->
+            <article class="slide" data-title="Outils · plus complexes">
+              <div class="s-chrome"><span><i class="dot"></i>Outils · 3 / 3</span><span>Plus complexes</span></div>
+              <span class="s-tag ink">Famille 03</span>
+              <h3 class="s-title">Les outils plus complexes.</h3>
+              <div class="s-g3">
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon ink">CC</span></div><h4>Claude Code</h4><p class="s-url">claude.com/code</p><p>Claude travaille directement dans vos fichiers et votre terminal.</p><p class="s-price">À partir de 15&nbsp;€ HT / mois (90&nbsp;€ HT pour un usage semi-intensif)</p></div>
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon ink">AG</span></div><h4>Google Antigravity</h4><p class="s-url">antigravity.google</p><p>L'environnement de développement de Google où des agents IA codent, testent et itèrent avec vous.</p><p class="s-price">À partir de 22&nbsp;€ / mois</p></div>
+                <div class="s-card tool"><div class="s-row1"><span class="s-icon ink">CX</span></div><h4>Codex</h4><p class="s-url">openai.com/codex</p><p>L'agent de code d'OpenAI&nbsp;: modifie un projet, exécute du code. Plutôt pour développeurs.</p><p class="s-price">À partir de 21&nbsp;€ / mois (105&nbsp;€ pour un usage intensif)</p></div>
+              </div>
+            </article>
+
+            <!-- Slide 7 · Briques techniques -->
+            <article class="slide" data-title="Briques techniques">
+              <div class="s-chrome"><span><i class="dot"></i>Pour être à l'aise</span><span>Vocabulaire</span></div>
+              <p class="s-eyebrow">Pour discuter avec sa machine</p>
+              <h3 class="s-title small">Quelques briques techniques à connaître, pas à pas.</h3>
+              <div class="s-g4">
+                <div class="s-card brick"><span class="s-n">01</span><h4>Hébergement</h4><p>La plateforme où tourne votre site ou certaines de ses briques.</p></div>
+                <div class="s-card brick"><span class="s-n">02</span><h4>Nom de domaine</h4><p>L'adresse publique. Achat et renouvellement parfois séparés.</p></div>
+                <div class="s-card brick"><span class="s-n">03</span><h4>API (et maintenant MCP)</h4><p>Le moyen pour deux services de se parler. Nécessite souvent de s'inscrire.</p></div>
+                <div class="s-card brick"><span class="s-n">04</span><h4>Git / GitHub</h4><p>Le versionnage&nbsp;: garder l'historique et revenir en arrière.</p></div>
+                <div class="s-card brick"><span class="s-n">05</span><h4>Framework</h4><p>Les briques préfabriquées sur lesquelles on s'appuie.</p></div>
+                <div class="s-card brick"><span class="s-n">06</span><h4>Base de données</h4><p>Supabase, Airtable, SQLite… où vivent les données.</p></div>
+                <div class="s-card brick"><span class="s-n">07</span><h4>Scraping</h4><p>Aller chercher des données publiques sur le web.</p></div>
+                <div class="s-card brick"><span class="s-n">08</span><h4>Vocabulaire web</h4><p>Modale, colonnes, H1/H2, ancres, ICS… (conseil&nbsp;: les règles Opquast)</p></div>
+                <div class="s-card brick"><span class="s-n">09</span><h4>Inspecteur</h4><p>L'outil du navigateur pour comprendre une page.</p></div>
+                <div class="s-card brick"><span class="s-n">10</span><h4>Logs</h4><p>Les traces que laisse la machine, précieuses pour déboguer.</p></div>
+                <div class="s-card brick"><span class="s-n">11</span><h4>Acteurs du marché</h4><p>Choisir entre Vercel, Netlify, Supabase, OVH, Clever Cloud…</p></div>
+                <div class="s-card brick"><span class="s-n">12</span><h4>Le champ des possibles</h4><p>Ce que l'IA sait faire, et ce qu'elle ne sait pas (encore) bien faire.</p></div>
+              </div>
+            </article>
+
+            <!-- Slide 8 · Posture -->
+            <article class="slide" data-title="La posture">
+              <div class="s-chrome"><span><i class="dot"></i>Pour être à l'aise</span><span>Posture</span></div>
+              <p class="s-eyebrow">Le plus important n'est pas technique</p>
+              <h3 class="s-title">La posture à adopter.</h3>
+              <ul class="s-posture">
+                <li><span class="s-n">01</span><p><b>Savoir ce que l'on veut</b>, ou savoir trancher. La machine reflète vos décisions.</p></li>
+                <li><span class="s-n">02</span><p><b>Oser demander de l'aide</b> à la machine&nbsp;: son avis, ses options, ses recommandations.</p></li>
+                <li><span class="s-n">03</span><p><b>Être pugnace</b>&nbsp;: accepter de se battre un peu, et savoir appeler un humain à la rescousse.</p></li>
+                <li><span class="s-n">04</span><p><b>S'entourer</b>&nbsp;: d'amis bricoleurs, d'un dev, d'une communauté.</p></li>
+                <li><span class="s-n">05</span><p><b>Être exigeant·e et critique</b> sur ce que produit la machine. Elle se trompe, vous arbitrez.</p></li>
+                <li><span class="s-n">06</span><p><b>Connaître ses limites</b>&nbsp;: jusqu'où aller seul·e, où s'arrêter, où déléguer.</p></li>
+              </ul>
+            </article>
+
+          </div>
+          <div class="deck-bar">
+            <button class="deck-btn" type="button" id="deck-prev" aria-label="Slide précédente">◀</button>
+            <span class="deck-count" id="deck-count" aria-live="polite">1 / 8</span>
+            <button class="deck-btn" type="button" id="deck-next" aria-label="Slide suivante">▶</button>
+            <ol class="deck-chips" id="deck-chips"></ol>
+            <button class="deck-btn deck-exit" type="button" id="deck-exit" aria-label="Quitter le plein écran">✕</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <ol class="steps">
+        <li><span>1</span>J'ai un besoin</li>
+        <li><span>2</span>Je le décris à l'IA</li>
+        <li><span>3</span>Je teste et j'ajuste</li>
+        <li><span>4</span>Je partage mon outil</li>
+      </ol>
+      <span>L'IA par tous et pour tous / iagora.fr</span>
+    </div>
+  </footer>
+
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <div class="viewer-id">
+        <span class="viewer-usage" id="viewer-usage"></span>
+        <h2 id="viewer-title"></h2>
+      </div>
+      <div class="viewer-actions">
+        <button class="v-btn" type="button" id="viewer-notes-btn" aria-expanded="false" aria-controls="viewer-notes">💬 Quoi montrer</button>
+        <button class="v-btn v-icon" type="button" id="viewer-prev" aria-label="Démo précédente">◀</button>
+        <button class="v-btn v-icon" type="button" id="viewer-next" aria-label="Démo suivante">▶</button>
+        <a class="v-btn" id="viewer-open" href="#" target="_blank" rel="noopener">Nouvel onglet ↗</a>
+        <button class="v-btn v-close" type="button" id="viewer-close">Fermer ✕</button>
+      </div>
+    </div>
+    <div class="viewer-body">
+      <p class="viewer-loading">Chargement de la démo…</p>
+      <iframe id="viewer-frame" title="Démo" allow="fullscreen; autoplay; clipboard-write; xr-spatial-tracking" allowfullscreen></iframe>
+      <aside class="viewer-notes" id="viewer-notes" hidden>
+        <p class="eyebrow">Pour l'animateur</p>
+        <ul id="viewer-notes-list"></ul>
+        <p class="viewer-url" id="viewer-url"></p>
+      </aside>
+    </div>
+  </dialog>
+</body>
+</html>

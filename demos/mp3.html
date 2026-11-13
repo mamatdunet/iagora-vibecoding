@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le lecteur MP3 de mes 15 ans</title>
+  <link rel="icon" href="../assets/logo-iagora.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Heebo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue-600: #3045d1; --blue-50: #eef0fc;
+      --pink-600: #ff50be; --pink-700: #d62e96; --pink-50: #ffeef8;
+      --ink-900: #000; --ink-800: #14141a; --ink-500: #5c5c68; --ink-200: #d9d9e0; --white: #fff;
+      --font-display: "Anton", "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+      --font-body: "Heebo", "Helvetica Neue", Arial, sans-serif;
+      --radius-lg: 20px; --radius-pill: 999px;
+      --shadow-lg: 0 18px 48px rgba(20, 20, 26, .14);
+      --ease-out: cubic-bezier(.22, .61, .36, 1);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { background: var(--white); color: var(--ink-800); font-family: var(--font-body); font-size: 18px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 36px 24px 48px; }
+    .eyebrow { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--pink-700); }
+    h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(40px, 6vw, 80px); line-height: .95; text-transform: uppercase; color: var(--blue-600); }
+    .lead { max-width: 820px; margin: 16px 0 0; font-size: clamp(17px, 1.7vw, 21px); }
+    .lead strong { color: var(--ink-900); }
+
+    .hero { display: grid; grid-template-columns: 1fr auto; gap: 24px 56px; align-items: center; }
+    .player { width: 210px; transform: rotate(-6deg); filter: drop-shadow(0 18px 30px rgba(20,20,26,.22)); }
+
+    .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 36px 0 0; padding: 0; list-style: none; }
+    .timeline li { position: relative; padding: 20px 22px; border: 2px solid var(--ink-900); border-radius: var(--radius-lg); background: var(--white); }
+    .timeline li.win { background: var(--blue-600); border-color: var(--blue-600); color: var(--white); }
+    .timeline .k { font-family: var(--font-display); font-size: 44px; line-height: .9; color: var(--pink-600); }
+    .timeline h2 { margin: 8px 0 6px; font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1; text-transform: uppercase; color: var(--ink-900); }
+    .timeline li.win h2 { color: var(--white); }
+    .timeline p { margin: 0; font-size: 16px; }
+
+    .lesson { margin-top: 28px; padding: 20px 24px; border: 2px dashed var(--pink-600); border-radius: var(--radius-lg); background: var(--pink-50); font-size: 18px; }
+    .lesson strong { color: var(--ink-900); }
+
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: var(--radius-pill); background: var(--blue-600); color: var(--white); font-family: var(--font-display); font-size: 18px; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: background-color 220ms var(--ease-out), color 220ms var(--ease-out); }
+    .cta:hover { background: var(--pink-600); color: var(--ink-900); }
+    .cta.outline { background: var(--white); color: var(--blue-600); box-shadow: inset 0 0 0 2px var(--blue-600); }
+    .cta.outline:hover { background: var(--blue-600); color: var(--white); }
+    .note { margin-top: 12px; font-size: 14px; color: var(--ink-500); }
+
+    @media (max-width: 960px) {
+      .timeline { grid-template-columns: 1fr 1fr; }
+      .hero { grid-template-columns: 1fr; }
+      .player { width: 150px; }
+    }
+    @media (max-width: 560px) { .timeline { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Ressusciter ses vieux outils</p>
+        <h1>Le lecteur MP3 de mes 15&nbsp;ans remarche</h1>
+        <p class="lead">Un baladeur MP3 de 2003, retrouvé au fond d'un tiroir. Aucun ordinateur d'aujourd'hui ne le reconnaît&nbsp;: son pilote n'existe plus que pour Mac&nbsp;OS&nbsp;9. Avec l'IA, <strong>on a reconstruit un petit outil pour le relire et le remplir depuis un Mac récent</strong>.</p>
+      </div>
+      <svg class="player" viewBox="0 0 120 200" aria-hidden="true">
+        <rect x="6" y="6" width="108" height="188" rx="22" fill="#d9d9e0" stroke="#000" stroke-width="4"/>
+        <rect x="20" y="22" width="80" height="58" rx="6" fill="#3045d1" stroke="#000" stroke-width="3"/>
+        <text x="60" y="47" text-anchor="middle" font-family="Anton, Arial, sans-serif" font-size="15" fill="#fff">MP3</text>
+        <text x="60" y="66" text-anchor="middle" font-family="Heebo, Arial, sans-serif" font-weight="700" font-size="9" fill="#ff50be">♪ 2003 ♪</text>
+        <circle cx="60" cy="132" r="36" fill="#fff" stroke="#000" stroke-width="3"/>
+        <circle cx="60" cy="132" r="13" fill="#ff50be" stroke="#000" stroke-width="3"/>
+        <text x="60" y="108" text-anchor="middle" font-size="10" font-weight="700" font-family="Heebo, Arial">+</text>
+        <text x="60" y="162" text-anchor="middle" font-size="12" font-weight="700" font-family="Heebo, Arial">−</text>
+        <text x="34" y="136" text-anchor="middle" font-size="9" font-family="Heebo, Arial">◀◀</text>
+        <text x="86" y="136" text-anchor="middle" font-size="9" font-family="Heebo, Arial">▶▶</text>
+        <rect x="48" y="178" width="24" height="6" rx="3" fill="#000"/>
+      </svg>
+    </div>
+
+    <ol class="timeline">
+      <li>
+        <div class="k">01</div>
+        <h2>Le problème</h2>
+        <p>Le lecteur (puce SigmaTel, 2003) ne se présente pas comme une clé&nbsp;USB. C'est l'ancien pilote de l'ordinateur qui faisait tout le travail.</p>
+      </li>
+      <li>
+        <div class="k">02</div>
+        <h2>L'enquête</h2>
+        <p>Avec l'IA, on a décortiqué le pilote Mac&nbsp;OS&nbsp;9 d'origine, puis vérifié le résultat en le faisant tourner dans un émulateur d'ancien Mac.</p>
+      </li>
+      <li>
+        <div class="k">03</div>
+        <h2>L'outil</h2>
+        <p>Un petit programme refait ce travail sur un Mac d'aujourd'hui&nbsp;: on ouvre le lecteur, on glisse ses MP3 comme sur une clé, on referme.</p>
+      </li>
+      <li class="win">
+        <div class="k">04</div>
+        <h2>Ça remarche&nbsp;!</h2>
+        <p>Sauvegarde automatique avant toute écriture, vérifications à chaque étape&nbsp;: le vieux baladeur reprend du service.</p>
+      </li>
+    </ol>
+
+    <p class="lesson">💡 <strong>Ce que ça montre&nbsp;:</strong> l'IA ne sert pas qu'à créer du neuf. Elle peut aussi redonner vie à un appareil, un logiciel ou des fichiers anciens que plus personne ne sait lire&nbsp;: une alternative à la poubelle et au rachat.</p>
+
+    <div class="links">
+      <a class="cta" href="https://www.linkedin.com/pulse/le-lecteur-mp3-de-mes-15-ans-est-fonctionnel-merci-lia-chatry-0ynfe/" target="_blank" rel="noopener">Lire l'article sur LinkedIn ↗</a>
+      <a class="cta outline" href="https://github.com/mamatdunet/drivers-napa-pa11" target="_blank" rel="noopener">Voir le code sur GitHub ↗</a>
+    </div>
+    <p class="note">LinkedIn et GitHub ne s'affichent pas dans une fenêtre intégrée&nbsp;: ils s'ouvrent dans un nouvel onglet.</p>
+  </div>
+</body>
+</html>
